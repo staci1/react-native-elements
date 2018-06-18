@@ -9,7 +9,7 @@ import ViewPropTypes from '../config/ViewPropTypes';
 
 function generateChild(value, type) {
   if (React.isValidElement(value)) {
-    return <View key={type}>{value}</View>;
+    return <View key={type} style={{flex: 1}}>{value}</View>;
   } else if (typeof value === 'object' && !isEmpty(value)) {
     return type === 'center' ? (
       <Title {...value} key={type} />
